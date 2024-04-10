@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barba and Beer</title>
     <link rel="stylesheet" href="inicio-style.css">
+    <script src="script.js"></script>
 
 </head>
 
@@ -53,7 +54,25 @@
     <section id="contato">Contato        
     </section>
 
-    <section id="login">Login
+    <section id="login">
+        <div class="container">
+            <h1>Agendamento de Barbearia</h1>
+            <form id="appointment-form">
+                <input type="text" id="nome" placeholder="Nome completo" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+                <select id="servico" required>
+                    <option value="" disabled selected>Selecione o serviço desejado</option>
+                    <option value="Corte de Cabelo">Corte de Cabelo</option>
+                    <option value="Barba">Barba</option>
+                    <option value="Corte e Barba">Corte e Barba</option>
+                            </select>
+                <input type="date" id="data" required>
+                <input type="time" id="hora" required>
+                <input type="submit" value="Agendar">
+            </form>
+            <div id="error-message" class="error-message"></div>
+        </div>
     </section>
 
 </body>
